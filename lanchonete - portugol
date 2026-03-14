@@ -1,0 +1,73 @@
+algoritmo "lanchonete"
+
+var
+  big_bobs:real
+  big_mac:real
+  natural:real
+  coca_cola:real
+  suco:real
+  guarana:real
+  sorvete:real
+  torta:real
+  total:real
+  sanduiche:real
+  bebida: real
+  sobremesa:real
+inicio
+  big_bobs <- 3.50
+  big_mac <- 3.80
+  natural <- 2.00
+  coca_cola <- 1.20
+  suco <- 1.50
+  guarana <- 1.25
+  sorvete <- 3.00
+  torta <- 2.50
+
+  //sanduiche
+  escreval("Escolha seu sanduiche: ")
+  escreval("1 para Big Bob's")
+  escreval("2 para Big Mac")
+  escreval("3 para Natural")
+  leia(sanduiche)
+  se sanduiche = 1 entao
+    total <- big_bobs
+    se sanduiche = 2 entao
+      total <- big_mac
+    senao
+      total <- natural
+    fimse
+  fimse
+
+  //bebida
+  escreval("Agora escolha sua bebida" )
+  escreval("1 para Coca-cola")
+  escreval("2 para Suco")
+  escreval("3 para Guaraná" )
+  leia(bebida)
+  se bebida = 1 entao
+    total <- total + coca_cola
+    se bebida = 2 entao
+      total <- total + suco
+    senao
+      total <- total + guarana
+    fimse
+  fimse
+
+  //sobremesa
+  escreval("Por fim a sua sobremesa: ")
+  escreval("1 para Sorvete")
+  escreval("2 para Torta")
+  leia(sobremesa)
+  se sobremesa = 1 entao
+    total <- total + sorvete
+  senao
+    total <- total + torta
+fimse
+
+escreval("O total da sua refeição foi: R$"total)
+
+fimalgoritmo
+
+//Big Bob´s 3,50   Coca-cola 1,20    Sorvete 3,00
+//Big Mac 3,80     Suco 1,50         Torta 2,50
+//Natural 2,00     Guaraná 1,25
