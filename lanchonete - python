@@ -1,0 +1,57 @@
+'''Big Bob´s 3,50   Coca-cola 1,20    Sorvete 3,00
+Big Mac 3,80     Suco 1,50         Torta 2,50
+Natural 2,00     Guaraná 1,25'''
+
+from time import sleep
+print("========================================CARDÁPIO========================================") 
+print("Big Bob´s: R$3,50     Coca cola: R$1,20   Sorvete: R3,00 \n Big Mac R$3,80       Suco: R$1,50      Guaraná: R$1,25     Torta: R$2,50\n Natural R$2,00")
+print("="*100)
+
+total = 0.0
+
+#sanduiche
+while True:
+    sanduiche = input("Qual o Sanduiche que você quer? ").lower()
+    SanduicheValor = {
+        "Big bob's".lower(): 3.50,
+        "Big Mac".lower(): 3.80,
+        "Natural".lower(): 2.00
+    }
+    if sanduiche in SanduicheValor:
+        total += SanduicheValor[sanduiche]
+        break
+    else:
+        print("Tente novamente. Não temos esse produto.")
+
+#bebida
+while True:
+    bebida = input("E agora qual a bebida que você quer? ").lower()
+    Bebida_valor = {
+        "Coca cola".lower(): 1.20,
+        "Suco".lower(): 1.50,
+        "guaraná".lower(): 1.25
+    }
+    if bebida in Bebida_valor:
+        total += Bebida_valor[bebida]
+        break
+    else:
+        print("Tente novamente. Não temos esse produto.")
+
+
+#sobremesa
+while True:
+    sobremesa = input("Por fim diga a sobremesa que voc quer: ").lower()
+    Sobremesa_Valor = {
+        "Torta".lower(): 2.50,
+        "Sorvete".lower(): 3.00
+    }
+    if sobremesa in Sobremesa_Valor:
+        total += Sobremesa_Valor[sobremesa]
+        break
+    else:
+        print("Tente novamente. Não temos esse produto.")
+
+print("Aguarde. Calculando total...")
+sleep(1.5)
+
+print(f"O total foi de R${total:.2f}")
