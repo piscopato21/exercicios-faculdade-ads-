@@ -1,0 +1,26 @@
+from time import sleep
+camisa = 9.50
+calca = 15.00
+meia = 1.20
+
+CamisaValor = int(input("Quantas camisas foram lavadas? "))
+CamisaTotal = CamisaValor * camisa
+print(f"O valor total de camisa foi de R${CamisaTotal:.2f}")
+
+sleep(1)
+
+CalcaValor = int(input("Quantas calças foram lavadas? "))
+CalcaTotal = CalcaValor * calca
+print(f"O valor total da calça foi {CalcaTotal:.2f}")
+
+sleep(1)
+
+MeiaValor = int(input("Quantas meias foram lavadas"))
+MeiaTotal = MeiaValor * meia
+print(f"O valor total da meia foi R${MeiaTotal:.2f}")
+
+sleep(2)
+
+total = CamisaTotal + CalcaTotal + MeiaTotal
+
+print(f"O total foi R${total:.2f}")
