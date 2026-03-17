@@ -1,0 +1,12 @@
+print("=====Operação de caixa eletrônico=====")
+op1 = float(input("Quanto o senhor tem em sua conta? R$".replace(",", ".")))
+op2 = str(input("Você gostaria de fazer uma retirada ou um depósito? ").lower())
+
+if op2 == "depósito":
+    dep1 = float(input("Diga quanto você quer depositar: R$"))
+    total = op1 + dep1
+elif op2 == "retirada":
+    ret1 = float(input("Diga quanto você quer retirar: R$"))
+    total = op1 - ret1
+
+print(f"O senhor tinha R${op1:.2f} e escolheu '{op2}'.\nEntão a sua conta ficou com R${total:,.2f}")
