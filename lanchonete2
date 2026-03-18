@@ -1,0 +1,46 @@
+'''Uma lanchonete está disponibilizando para seus clientes um terminal por meio do qual poderão fazer os pedidos. Para que isso aconteça, o terminal deve exibir o menu de itens disponíveis conforme se vê a seguir:
+* Cardápio *
+100 – Hambúrguer – R$5,50
+101 – Cachorro-quente – R$4,50
+102 – Milkshake – R$7,00
+103 – Pizza brotinho – R$8,00
+104 - Cheeseburguer – R$8,50
+
+Informe o código do seu pedido:
+Uma vez que o cliente informe o código do item desejado, o terminal deverá perguntar a quantidade de itens que ele deseja pedir. Ao final, o usuário deverá informar o pedido do cliente e o valor a pagar. Escreva o algoritmo que possam resolver o problema da lanchonete. Utilize as estruturas CASO e SWITCH.'''
+
+print("100 – Hambúrguer – R$5,50 \n101 – Cachorro-quente – R$4,50\n102 – Milkshake – R$7,00\n103 – Pizza brotinho – R$8,00\n104 - Cheeseburguer – R$8,50")
+pedido = int(input("Diga o seu pedido: "))
+
+if pedido == 100:
+    quant = int(input("Quantos você quer? "))
+    hamburguer = 5.50
+    total1 = quant * hamburguer
+    print(total1)
+
+elif pedido == 101:
+    quant = int(input("Quantos você quer? "))
+    cachorro_quente = 4.50
+    total2 = quant * cachorro_quente
+    print(total2)
+
+elif pedido == 102:
+    quant = int(input("Quantos você quer? "))
+    milkshake = 7.00
+    total3 = quant * milkshake
+    print(total3)
+
+elif pedido == 103:
+    quant = int(input("Quantos você quer? "))
+    pizza_brotinho = 8.00
+    total4 = quant * pizza_brotinho
+    print(total4)
+
+elif pedido == 104:
+    quant = int(input("Quantos você quer? "))
+    cheeseburguer = 8.50
+    total5 = quant * cheeseburguer
+    print(total5)
+
+else:
+    print("Não temos esse produto.")
