@@ -1,0 +1,78 @@
+"Fazer um programa para um pedágio. Valor muda em horário de pico"
+from time import sleep
+
+#Valores
+CarroVal = 10
+CaminhaoVal = 15
+MotoVal = 5
+Continuar = "S"
+
+#APRESENTAÇÃO
+
+print("|===========PEDÁGIO===========|\n|CARRO = R$10,00              |\n|CAMINHÃO(POR EIXO) = R$15,00 |\n|MOTOCICLETA = R$5,00         |\n-------------------------------")
+print("    ")
+print("|=====VEÍCULOS ISENTOS========|\n|VIATURAS(PF, PC, PF, PM, PRF)|\n|AMBULÂNCIA                   |\n|CAMINHÃO DE BOMBEIROS        |\n-------------------------------")
+print("    ")
+print("|=======HORÁRIO DE PICO=======|\n|06:00 às 09:00               |    \n|17:00 às 20:00               |\n-------------------------------")
+
+print("    ")
+print("    ")
+
+                                                                        #PROCESSAMENTO
+while Continuar == "S": 
+    
+#ENTRADA
+    VeiculoTipo = input("Qual foi o veículo passado? ").lower()
+    #Carro
+    if VeiculoTipo == "carro".lower():
+        Hora = float(input("Horário passado: "))
+        sleep(0.8)
+        print(f"O seu veículo é >>{VeiculoTipo}<<")
+        if 6 <= Hora <= 9 or 17 <= Hora <= 20: #<-- se a hora estiver entre o horário de pico passa pra linha abaixo
+            print("CALCULANDO VALOR. AGUARDE.")
+            sleep(0.5)
+            print(f"O valor do pedágio é R${CarroVal + (CarroVal * 0.2):.2f}.")  #<-- SAÍDA
+        else:
+            print("CALCULANDO VALOR. AGUARDE.")
+            sleep(0.5)
+            print(f"O valor do pedágio é R${CarroVal:.2f}")  #<-- SAÍDA
+
+    #Moto
+    elif VeiculoTipo == "motocicleta".lower():
+        Hora = float(input("Horário passado: "))
+        sleep(0.8)
+        print(f"O seu veículo é >>{VeiculoTipo}<<")
+        if 6 <= Hora <= 9 or 17 <= Hora <= 20:
+            print("CALCULANDO VALOR. AGUARDE.")
+            sleep(0.5)
+            print(f"O valor do pedágio é R${MotoVal + (MotoVal * 0.2):.2f}.")  #<-- SAÍDA
+        else:
+            print("CALCULANDO VALOR. AGUARDE.")
+            sleep(0.5)
+            print(f"O valor do pedágio é R${MotoVal:.2f}")  #<-- SAÍDA
+
+    #Caminhão
+    elif VeiculoTipo == "caminhão".lower():
+        Hora = float(input("Horário passado: "))
+        sleep(0.8)
+        print(f"O seu veículo é >>{VeiculoTipo}<<")
+        CaminhaoEixo = int(input("Quantos eixos tem o caminhão? "))
+        if 6 <= Hora <= 9 or 17 <= Hora <= 20:
+            print("CALCULANDO VALOR. AGUARDE.")
+            sleep(0.5)
+            print(f"O valor do pedágio é R${(CaminhaoVal * CaminhaoEixo) * 1.2:.2f}.")  #<-- SAÍDA
+        else:
+            print("CALCULANDO VALOR. AGUARDE.")
+            sleep(0.5)
+            print(f"O valor do pedágio é R${CaminhaoVal * CaminhaoEixo:.2f}")  #<-- SAÍDA
+
+
+    #Veículos isentos
+    elif VeiculoTipo in ["viatura", "ambulancia", "ambulância", "caminhão de bombeiros"]:
+        print("Está isento de pedágio")  #<-- SAÍDA
+    else:
+        print("Veículo inválido.")
+
+
+    Continuar = input("Gostaria de ver outro veículo: [ S / N ]\n").strip().upper() #<-- o programa vai continuar rodando sempre que o usuário digitar "S" (Sim)
+print("Pagamento concluido! Boa viagem!")
