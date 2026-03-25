@@ -9,22 +9,31 @@ Continuar = "S"
 
 #APRESENTAÇÃO
 
-print("|===========PEDÁGIO===========|\n|CARRO = R$10,00              |\n|CAMINHÃO(POR EIXO) = R$15,00 |\n|MOTOCICLETA = R$5,00         |\n-------------------------------")
+print("|===========PEDÁGIO===========|")
+print("|CARRO = R$10,00              |")
+print("|CAMINHÃO(POR EIXO) = R$15,00 |")
+print("|MOTOCICLETA = R$5,00         |")
+print("-------------------------------")
 print("    ")
-print("|=====VEÍCULOS ISENTOS========|\n|VIATURAS(PF, PC, PF, PM, PRF)|\n|AMBULÂNCIA                   |\n|CAMINHÃO DE BOMBEIROS        |\n-------------------------------")
+print("|=====VEÍCULOS ISENTOS========|")
+print("|VIATURAS(PC, PF, PM, PRF)    |")
+print("|AMBULÂNCIA                   |")
+print("|CAMINHÃO DE BOMBEIROS        |")
+print("-------------------------------")
 print("    ")
-print("|=======HORÁRIO DE PICO=======|\n|06:00 às 09:00               |    \n|17:00 às 20:00               |\n-------------------------------")
+print("|=======HORÁRIO DE PICO=======|")
+print("|06:00 às 09:00               |")
+print("|17:00 às 20:00               |")
+print("-------------------------------")
+print("    ")
+print("    ")
 
-print("    ")
-print("    ")
-
-                                                                        #PROCESSAMENTO
-while Continuar == "S": 
+while Continuar == "S":
     
 #ENTRADA
-    VeiculoTipo = input("Qual foi o veículo passado? ").lower()
+    VeiculoTipo = input("Qual foi o veículo passado? ").lower()    #<--- Entrada
     #Carro
-    if VeiculoTipo == "carro".lower():
+    if VeiculoTipo == "carro".lower():   #<--- Processamento
         Hora = float(input("Horário passado: "))
         sleep(0.8)
         print(f"O seu veículo é >>{VeiculoTipo}<<")
